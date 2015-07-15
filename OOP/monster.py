@@ -39,6 +39,15 @@ class Monster(object):
 		"""
 
 
+	def __str__(self):
+		"""This mehtod is called whenever any string
+		    conversion takes place
+		"""
+		return "{} {}, HP: {}, XP: {}".format(self.color.title(),
+			                                        self.__class__.__name__,
+			                                        self.hit_points,
+			                                        self.experience)
+
 
 	def battlecry(self):
 		return self.sound.upper()
