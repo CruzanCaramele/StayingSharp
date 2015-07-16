@@ -1,8 +1,9 @@
 import random
+from combat import Combat
 
 COLORS = ["yellow", "red", "blue", "green"]
 
-class Monster(object):
+class Monster(Combat):
 	"""This calls initializes a monster with certain
 	    attributes
 	"""

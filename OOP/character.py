@@ -1,5 +1,9 @@
-class Character(object):
+import random
+from combat import Combat
+
+class Character(Combat):
 	"""Player Class"""
+	attack_limit = 10
 	experience = 0
 	hit_points = 10
 
@@ -26,3 +30,13 @@ class Character(object):
 				return "bow"
 		else:
 			return self.get_weapon()
+
+
+	def attack(self):
+		"""Overriding attack method in Combat Class"""
+		roll = random.randint(1, self.attack_limit)
+		if self.weapon == "sword":
+			roll += 1
+		elif self.weapon == "axe":
+			roll += 2
+		return roll > 4
