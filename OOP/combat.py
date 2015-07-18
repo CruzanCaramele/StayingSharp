@@ -12,3 +12,5 @@ class Combat(object):
 	def attack(self):
 		roll = random.randint(1, self.attack_limit)
 		return roll > 4
+
+	
