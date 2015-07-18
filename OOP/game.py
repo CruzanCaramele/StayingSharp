@@ -96,18 +96,29 @@ class Game(object):
 		    up the player's experience, print a 
 		    message, Get a new monster.
 		"""
+		if self.monster.hit_points <= 0: 
+			self.player.experience += self.monster.experience
+			print("you killed {}!".formatself.monster)
+			self.monster = self.get_next_monster()
 
 
 	def __init__(self):
 		self.setup()
 
 		while self.player.hit_points and (self.monster or self.monsters):
+			print("\n'+'="*20)
 			print (self.player)
 			self.monster_turn()
+			print("-"*20)
 			self.player_turn()
 			self.cleanup()
+			print("\n'+'="*20)
+
 
 		if self.player.hit_points:
 			print("You win!")
 		elif self.monsters or self.monster:
 			print("You Lose!")
+		sys.exit()
+
+Game()
