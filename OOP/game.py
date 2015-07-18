@@ -50,7 +50,7 @@ class Game(object):
 			print ("{} is not attacking this turn".format(self.monster))
 
 
-	def player_turn(slef):
+	def player_turn(self):
 		"""Let the player, attack, rest or quit
 		    If player attacks: see if the attack 
 		    is successfull, if so, see if the
@@ -70,7 +70,7 @@ class Game(object):
 
 			if self.player.attack():
 				if self.monster.dodge():
-					print("{} dodged attack".format(self.monster()))
+					print("{} dodged attack".format(self.monster)
 				else:
 					if self.player.leveled_up():
 						self.monster.hit_points -= 2
