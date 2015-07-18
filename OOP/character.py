@@ -40,3 +40,4 @@ class Character(Combat):
 		elif self.weapon == "axe":
 			roll += 2
 		return roll > 4
+		
