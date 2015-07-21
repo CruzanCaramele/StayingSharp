@@ -48,6 +48,7 @@ class RollTests(unittest.TestCase):
 		self.assertEqual(self.hand1+self.hand3
 				   , sum(self.hand1.results)+\
 				    sum(self.hand3.results))
+	
 
 
 
