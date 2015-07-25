@@ -1,0 +1,1 @@
+[Dressed up Bear](/static/img/bear_complete.jpg)
