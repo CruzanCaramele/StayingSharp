@@ -1,9 +1,11 @@
 import json
 from flask import (Flask, render_template, redirect, 
-		     url_for, request, make_response)
+		     url_for, request, make_response,
+		     flash)
 from options import DEFAULTS
 
 app = Flask(__name__)
+app.secret_key = "dj45oiwe5hoi^&~.^$&(($#GHFD#2873^$ihshier)("
 
 def get_saved_data():
 	try:
@@ -27,6 +29,7 @@ def save():
 	#import pdb; pdb.set_trace()
 	#cookies are set on the respons, things that go back to the
 	#browser
+	flash("Alright! That looks awesome!")
 	response = make_response(redirect(url_for("builder")))
 	data = get_saved_data()
 	data.update(dict(request.form.items()))
