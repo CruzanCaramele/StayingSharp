@@ -1,2 +1,1 @@
-! [Dressed up Bear](/static/img/bear_complete.jpg)
-Format: ![Alt Text](url)
+![Image of Bear](static/img/bear_complete.jpg)
