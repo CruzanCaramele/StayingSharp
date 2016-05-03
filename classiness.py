@@ -16,7 +16,7 @@ Everything else has 0 points.
 Use the test cases below to guide you!"""
 
 class Classy(object):
-	def __initi__(self):
+	def __init__(self):
 		self.items = []
 
 	def addItem(self,item):
