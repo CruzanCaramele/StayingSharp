@@ -52,3 +52,4 @@ Assuming a new user called "tester" has been created and a new database called
 newdb is also created with a table "tbltest"
 To grant permission to the user "tester" to INSERT into tables , run the following:
  - GRANT INSERT on tbltest TO tester;
+ - GRANT ALL on tbltest TO tester;
