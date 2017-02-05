@@ -53,3 +53,6 @@ newdb is also created with a table "tbltest"
 To grant permission to the user "tester" to INSERT into tables , run the following:
  - GRANT INSERT on tbltest TO tester;
  - GRANT ALL on tbltest TO tester;
+
+To Revoke roles:
+ - REVOKE
