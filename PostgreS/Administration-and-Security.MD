@@ -56,3 +56,15 @@ To grant permission to the user "tester" to INSERT into tables , run the followi
 
 To Revoke roles:
  - REVOKE
+
+
+
+#### Backing Up and Restoring Databases
+- connect to the database to be backed up
+  - \connect dbtest
+- check or add values as needed and quit out of the database
+  - pg_dump dbtest > dbtest.txt
+- to restore the data back into the database
+  - psql dbtest < dbtest.txt
+
+#### Replication - Master Server Configuration
