@@ -68,3 +68,18 @@ To Revoke roles:
   - psql dbtest < dbtest.txt
 
 #### Replication - Master Server Configuration
+- navigate to cd /var/lib/pgsql/9.4/data & and make changes to the postgresql.conf file
+  - set **wal_level** to **hot_standby**
+  - set the number of slaves by changing **max_wal_senders = 1** . In this case 1 slave only
+  - set the standby server names **synchronous_standby_names = 'zaria3'**
+  - connect to psql and a database, then create a user for replication:
+    - create user replica replication;
+  - add the following line at the end of /var/lib/pgsql/9.4/data/pg_hba.conf
+    - host     replication     replica         SLAVE_SERVER_IP_ADDRESS          trust
+
+
+#### Replication - Slave Server Configuration
+- on the slave server, stop the postgresql service
+- delete all data in /var/lib/pgsql/9.4/data 
+- run pgsql:
+  - pg_basebackup -D /var/lib/pgsql/9.4/data/ -h MASTER_SERVER_IP_ADDRESS -U replica
