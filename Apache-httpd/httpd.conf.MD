@@ -27,6 +27,7 @@ Below are some of the important areas of the default configuration file:
     - The <Directory> block sets configuration directives for the specified directory as well as all descendant directories.
     - AllowOverride none, .htaccess files will not be consulted for per directory configuration settings. Changing this will have performance penalty and security ramifications.
     - Require all denied, httpd will refuse to serve content out of this directory and will return HTTP/1.1 403 forbidden error when requested by a client.
+    - Require all granted, httpd will server content out of this direcotry. Setting this on a directory out of the normal content tree can have security implications.
 
 
 	
