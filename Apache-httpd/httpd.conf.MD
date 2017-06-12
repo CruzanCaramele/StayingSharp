@@ -25,6 +25,8 @@ Below are some of the important areas of the default configuration file:
         </Directory> ```
 
     - The <Directory> block sets configuration directives for the specified directory as well as all descendant directories.
+    - AllowOverride none, .htaccess files will not be consulted for per directory configuration settings. Changing this will have performance penalty and security ramifications.
+    - 
 
 
 	
